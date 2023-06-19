@@ -2,7 +2,7 @@
     
     <section class="listing-apply">
       <h2 class="section-heading">people form</h2>
-      <form [formGroup]="peopleForm" (submit)="submitPerson()">
+      <form [formGroup]="peopleForm" (ngSubmit)="submitPerson()">
         <label for="first-name">id</label>
         <input id="id"  class="primary" type="text" formControlName="id">
         <br>
@@ -23,6 +23,6 @@
     </section>
     <section>
         <h2 class="section-heading">list</h2>
-            <div id="peopleList"></div>
+            <app-people-list  [dataList]="dataList"></app-people-list>
     </section>
   </article>
