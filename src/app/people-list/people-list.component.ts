@@ -7,4 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class PeopleListComponent {
   @Input() public dataList: any[] = [];
+
+  public addCharacteristic(newEntry: string, index: number) {
+    if (!this.dataList[index].characteristics) {
+      this.dataList[index].characteristics = [];
+    }
+    this.dataList[index].characteristics.push(newEntry);
+  }
 }

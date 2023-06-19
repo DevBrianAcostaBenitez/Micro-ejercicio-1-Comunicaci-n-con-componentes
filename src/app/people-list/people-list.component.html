@@ -1,9 +1,14 @@
 <ul>
-  <li *ngFor="let data of dataList">
-    <p>Nombre: {{ data.id }}</p>
+  <li *ngFor="let data of dataList; let i = index">
+    <p>id: {{ data.id }}</p>
     <p>Nombre: {{ data.name }}</p>
     <p>Apellido: {{ data.lastName }}</p>
     <p>Posición: {{ data.position }}</p>
     <p>Salario: {{ data.salary }}</p>
-  </li>
+      <ul>
+        <li *ngFor="let characteristic of data.characteristics">{{ characteristic }}</li>
+      </ul>
+      <app-characteristics (addCharacteristic)="addCharacteristic($event, i)"></app-characteristics>
+    </li>
+  
 </ul>
