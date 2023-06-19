@@ -1,0 +1,28 @@
+<article>
+    
+    <section class="listing-apply">
+      <h2 class="section-heading">people form</h2>
+      <form [formGroup]="peopleForm" (submit)="submitPerson()">
+        <label for="first-name">id</label>
+        <input id="id"  class="primary" type="text" formControlName="id">
+        <br>
+        <label for="name">name</label>
+        <input id="name" type="text" formControlName="name">
+        <br>
+        <label for="lastName">last Name</label>
+        <input id="lastName" type="text" formControlName="lastName">
+        <br>
+        <label for="position">position</label>
+        <input id="position" type="text" formControlName="position">
+        <br>
+        <label for="lastName">salary</label>
+        <input id="salary" type="text" formControlName="salary">
+        <br>
+        <button type="submit" class="primary">add to the list</button>
+      </form>
+    </section>
+    <section>
+        <h2 class="section-heading">list</h2>
+            <div id="peopleList"></div>
+    </section>
+  </article>
